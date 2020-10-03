@@ -61,6 +61,7 @@ router.get('/:id/edit', async (req, res, next) => {
         const author = await Author.findById(authorId)
         res.render('authors/edit', { author: author })
     } catch (error) {
+        console.log(error)
         res.redirect('/authors')
     }
 })
